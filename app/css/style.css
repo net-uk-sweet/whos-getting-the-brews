@@ -1,0 +1,68 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.hero-unit {
+    overflow: hidden;
+    margin: 50px auto 0 auto;
+    width: 600px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin: -25px 0 25px 0;
+}
+
+.selector {
+    float: left;
+    width: 300px;
+    margin: 0;
+}
+
+.selector img {
+    cursor: pointer;
+    width: 100px;
+    opacity: 0.25;
+    margin: 0;
+    transition: opacity .5s ease-in;
+}
+
+/*.selector img:hover,*/ .selector .selected {
+    opacity: 1;
+}
+
+.selector li { 
+    float: left;
+    list-style: none; 
+}
+
+.choose {
+    float: left;
+    text-align: center;
+    margin: 2px 0 0 50px;
+    width: 250px;
+    height: 300px;
+}
+
+.choose p { 
+    box-sizing: border-box;
+    height: 300px;
+    margin: 0;
+    color: #808080;
+    font-size: 10em;
+    text-align: center;
+    line-height: 1.5em;
+    border: 2px dashed #808080; 
+}
+
+button { margin-top: 28px; }
