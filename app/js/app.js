@@ -1,7 +1,7 @@
 'use strict';
 /* globals angular, _ */
 
-angular.module('brewApp', [])
+angular.module('brewApp', [/* Module dependancies */])
 	.controller('MainCtrl', function($scope) {
 
 		$scope.people = [
