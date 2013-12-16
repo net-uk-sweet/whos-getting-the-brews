@@ -14,6 +14,26 @@
 
     <div class="hero-unit" ng-controller="MainCtrl">
         <h1>Who's getting the brews?</h1>
+        <ul class="selector">
+            <li ng-repeat="person in people | orderBy:'lastName'">
+                <img ng-src="{{person.image}}"
+                    alt="{{person.firstName}} {{person.lastName}}"
+                    ng-click="person.selected = !person.selected"
+                    ng-class="{selected: person.selected}"
+                />
+            </li>
+        </ul>
+        <div class="choose">
+            <p ng-show="!chosen">?</p>
+            <img ng-src="{{chosen.image}}"
+                alt="{{chosen.firstName}} {{chosen.lastName}}"
+                ng-show="chosen"
+            />
+            <button class="btn"
+                ng-disabled="!hasSelected()"
+                ng-click="choose()"
+            >Choose one!</button>
+        </div>
     </div>
 
     <script src="js/libs/angular.js"></script>

@@ -60,4 +60,21 @@ angular.module('brewApp', [/* Module dependancies */])
 				selected: false
 			}
 		];
+
+		function getSelected() {
+			return _.where($scope.people, { selected: true });
+		}
+
+		$scope.choose = function() {
+
+			var selected = getSelected(),
+				random = Math.floor(Math.random() * selected.length);
+
+			$scope.chosen = selected[random];
+			$scope.chosen.selected = false;
+		};
+
+		$scope.hasSelected = function() {
+			return getSelected().length;
+		};
 	});
